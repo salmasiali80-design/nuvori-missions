@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0B0807">
+<link rel="icon" type="image/png" href="../assets/NUVORI_favicon_128.png">
+<link rel="apple-touch-icon" href="../assets/NUVORI_app_icon_512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NUVORI English">
+<meta property="og:title" content="Mission 01 — My Daily Routine">
+<meta property="og:description" content="Choose your door. Grow from there. A NUVORI English mission — speak, write, and record one confident answer today.">
+<meta property="og:image" content="https://salmasiali80-design.github.io/nuvori-missions/assets/NUVORI_og_card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://salmasiali80-design.github.io/nuvori-missions/01-daily-routine/">
+<meta name="twitter:card" content="summary">
+<title>NUVORI &middot; Mission 01 &mdash; My Daily Routine</title>
+<style>
+
+
+
+
+
+:root{
+  --obsidian:#0B0807;--panel:#16130E;--gold:#B89A5E;--gold-hi:#D6A23A;--gold-soft:#E3C176;
+  --champ:#D7C08A;--platinum:#F4EBDD;--ivory:#F4EBDD;--paper:#FFFDF8;--paper-2:#F4EBDD;
+  --ink:#14110D;--ink-2:#3A332A;--ink-soft:#6B6253;--hair:#E0D5BF;--muted:#7E7460;
+  --line:rgba(184,154,94,.18);--line-strong:rgba(184,154,94,.32);
+  --green:#2D6A4F;--green-bg:#E6F0E6;--green-line:#C2DCC4;
+  --red:#9B2226;--red-bg:#F6EAE6;--red-line:#E6CBC3;
+  --serif:'Cormorant Garamond',Georgia,serif;--ui:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;--cinzel:'Cinzel',serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{background:var(--obsidian);color:var(--platinum);font-family:var(--ui);-webkit-font-smoothing:antialiased;line-height:1.6}
+a{color:inherit}
+.page{max-width:880px;margin:0 auto;background:var(--obsidian);min-height:100vh;box-shadow:0 0 80px rgba(0,0,0,.45)}
+
+/* ===== HERO — from logo-treatment demo ===== */
+.hero{min-height:760px;display:flex;align-items:center;justify-content:center;text-align:center;padding:54px 26px 64px;position:relative;overflow:hidden;background:#060606;background-image:radial-gradient(ellipse 90% 40% at 50% 2%,rgba(184,154,94,.12),transparent 56%);background-repeat:no-repeat;border-bottom:1px solid var(--line)}
+.hero:before{content:"";position:absolute;inset:28px 18px;border:1px solid rgba(184,154,94,.14);pointer-events:none}
+.hero:after{content:"";position:absolute;width:460px;height:460px;border-radius:50%;top:74px;left:50%;transform:translateX(-50%);border:1px solid rgba(184,154,94,.08);box-shadow:0 0 80px rgba(184,154,94,.05) inset;pointer-events:none}
+.hero-inner{position:relative;z-index:1;width:100%;max-width:560px}
+.brand-lockup{margin:0 auto 42px;text-align:center}
+.brand-emblem{width:300px;max-width:80%;height:auto;display:block;margin:0 auto 8px}
+.brand-wordmark-type{font-family:var(--cinzel);font-weight:600;font-size:38px;letter-spacing:.22em;line-height:1;text-align:center;margin:0 auto 11px;padding-left:.22em;background:linear-gradient(180deg,#F4E4BC 0%,#D6A23A 42%,#B89A5E 70%,#8A6826 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.brand-tagline{font-family:var(--cinzel);font-size:9px;font-weight:600;letter-spacing:.28em;color:rgba(215,192,138,.80);text-transform:uppercase}
+.brand-divider{width:92px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:22px auto 0;opacity:.75}
+.mission-no{font-size:11px;font-weight:700;letter-spacing:.34em;color:var(--gold-soft);margin-bottom:12px;text-transform:uppercase}
+.mission-title{font-family:var(--serif);font-size:clamp(42px,8vw,62px);font-weight:500;color:var(--platinum);line-height:.98;margin-bottom:18px;letter-spacing:.01em}
+.skill-focus{font-size:12px;font-weight:500;letter-spacing:.14em;color:#a59a8b;margin-bottom:34px;text-transform:uppercase}
+.skill-focus span{color:var(--gold-soft)}
+.coreline{font-family:var(--serif);font-size:31px;font-style:italic;font-weight:500;color:var(--champ);line-height:1.22;margin:0 auto 22px;max-width:16ch}
+.intro{font-size:15px;color:#cfc7bb;max-width:43ch;margin:0 auto;line-height:1.72}
+
+/* ===== CREAM READING BODY (two-tier) ===== */
+.reading{background:var(--ivory);color:var(--ink)}
+.sec{padding:40px 26px;border-bottom:1px solid var(--hair)}
+.sec:last-child{border-bottom:none}
+.sec-label{font-family:var(--cinzel);font-size:10px;font-weight:700;letter-spacing:.24em;color:#8A6826;margin-bottom:8px;text-transform:uppercase}
+.sec-title{font-family:var(--serif);font-size:30px;font-weight:600;color:var(--ink);line-height:1.18;margin-bottom:20px}
+.sec-lead{font-size:14.5px;color:var(--ink-soft);max-width:60ch;margin:-8px 0 22px;line-height:1.6}
+
+/* Language Bank */
+.bank-group{margin-bottom:18px}.bank-group:last-child{margin-bottom:0}
+.bank-head{font-family:var(--ui);font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--ink-soft);text-transform:uppercase;margin-bottom:9px}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{font-family:var(--ui);font-size:14px;color:var(--ink);background:var(--paper);border:1px solid var(--hair);border-radius:7px;padding:6px 12px}
+.chip.phrase{font-style:italic;color:var(--ink-2)}
+
+/* Answer Builder — SEQUENCE (First → Then → After that → Finally) */
+.builder{background:var(--paper);border:1px solid var(--hair);border-radius:12px;padding:18px 20px;margin-top:4px}
+.builder-head{font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px}
+.builder-flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.bstep{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--ink);background:#FBF3E3;border:1px solid #EAD7B0;border-radius:8px;padding:5px 13px}
+.barrow{color:var(--gold);font-size:14px;font-weight:700}
+.builder-note{font-family:var(--ui);font-size:12.5px;color:var(--ink-soft);margin-top:12px;line-height:1.5}
+
+/* Doors */
+.doors-intro{text-align:center;margin-bottom:26px}
+.door{--door-accent:var(--gold);--slot-ink:#9C6F2E;--door-soft:#FBF3E3;--door-line:#EAD7B0;position:relative;overflow:hidden;background:var(--paper);border:1px solid var(--hair);border-top:3px solid var(--door-accent);border-radius:14px;padding:24px 22px;margin-bottom:18px;box-shadow:0 12px 34px rgba(40,28,12,.035)}
+.door:before{content:"";position:absolute;inset:0 0 auto 0;height:54px;background:linear-gradient(180deg,var(--door-soft),transparent);opacity:.34;pointer-events:none}
+.door:last-child{margin-bottom:0}
+.door.start{--door-accent:#5F8D73;--slot-ink:#4A7359;--door-soft:#EEF6EF;--door-line:#C9DDCF}
+.door.build{--door-accent:#B88742;--slot-ink:#9C6F2E;--door-soft:#FBF3E3;--door-line:#EAD7B0}
+.door.stretch{--door-accent:#7B6297;--slot-ink:#634F7D;--door-soft:#F3EEF8;--door-line:#D9CBE7}
+.door-head{position:relative;z-index:1;display:flex;align-items:baseline;justify-content:space-between;margin-bottom:4px;gap:10px}
+.door-name{font-family:var(--cinzel);font-size:15px;font-weight:700;letter-spacing:.16em;color:var(--door-accent)}
+.door-level{font-family:var(--ui);font-size:11px;font-weight:600;letter-spacing:.1em;color:var(--door-accent);background:var(--door-soft);border:1px solid var(--door-line);padding:3px 9px;border-radius:20px;white-space:nowrap}
+.door-goal{font-family:var(--serif);font-size:19px;font-style:italic;color:var(--ink-2);margin:8px 0 16px;line-height:1.35}
+.door-block{margin-bottom:14px}.door-block:last-child{margin-bottom:0}
+.db-label{font-family:var(--ui);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:6px}
+.model-first{font-family:var(--serif);font-size:17.5px;font-style:italic;font-weight:500;color:#0E0B07;line-height:1.62;background:var(--door-soft);border-left:3px solid var(--door-accent);padding:14px 16px;border-radius:0 8px 8px 0}
+.frame{font-family:var(--ui);font-size:15px;color:var(--ink);line-height:1.85}
+.frame .slot{color:var(--slot-ink);font-weight:700;border-bottom:1px dotted var(--door-accent)}
+.chips.dark-on-cream .chip{background:#FBF3E3;border-color:#EAD7B0}
+.voice-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--ui);font-size:12px;font-weight:600;color:var(--gold-hi);background:#FBF3E3;border:1px solid #EAD7B0;padding:6px 12px;border-radius:20px;margin-top:4px}
+.win{font-family:var(--ui);font-size:13px;color:var(--door-accent);background:var(--door-soft);border:1px solid var(--door-line);border-radius:10px;padding:10px 14px;margin-top:16px;line-height:1.5}
+.win b{color:var(--ink)}
+.stretch-lang{background:#16130E;border-radius:10px;padding:14px 16px;margin-top:4px}
+.stretch-lang .db-label{color:var(--gold-soft)}
+.stretch-lang .chips .chip{background:rgba(215,192,138,.07);border-color:rgba(215,192,138,.22);color:var(--champ)}
+
+/* Door-level questions — placed inside each path for clarity */
+.door-check{margin-top:16px;background:linear-gradient(180deg,#fffdf8 0%,var(--door-soft) 100%);border:1px solid var(--door-line);border-radius:12px;padding:14px 15px}
+.door-check .db-label{color:var(--door-accent)}
+.mini-q{padding:12px 0;border-bottom:1px solid color-mix(in srgb,var(--door-accent) 22%,transparent)}
+.mini-q:last-child{border-bottom:none;padding-bottom:0}
+.mini-stem{font-family:var(--serif);font-size:17px;color:var(--ink);line-height:1.45;margin-bottom:8px}
+.mini-stem .q-num{font-family:var(--ui);font-size:12px;color:var(--door-accent);font-weight:700;margin-right:4px}
+.mini-opts{display:flex;flex-direction:column;gap:6px;margin-bottom:4px}
+.mini-opt{font-family:var(--ui);font-size:13.5px;color:var(--ink-2);background:rgba(255,253,248,.72);border:1px solid var(--door-line);border-radius:8px;padding:8px 12px}
+
+/* Glossy final mission — use sparingly as a premium pause */
+.glossy-mission{position:relative;overflow:hidden;background:radial-gradient(circle at 50% 0%,rgba(227,193,118,.30) 0%,rgba(184,154,94,.12) 25%,transparent 55%),linear-gradient(180deg,#f4ebdd 0%,#b6ada0 32%,#2a2422 72%,#0b0807 100%);padding:58px 28px 62px;text-align:center;border-top:1px solid rgba(184,154,94,.20);border-bottom:1px solid rgba(184,154,94,.22)}
+.glossy-mission:before{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 0%,rgba(255,255,255,.25) 28%,transparent 46%);opacity:.28;pointer-events:none}
+.glossy-mission:after{content:"";position:absolute;left:50%;top:-120px;transform:translateX(-50%);width:520px;height:520px;border-radius:50%;border:1px solid rgba(244,235,221,.18);box-shadow:0 0 90px rgba(227,193,118,.14) inset;pointer-events:none}
+.glossy-inner{position:relative;z-index:1;max-width:580px;margin:0 auto}
+.glossy-icon{font-size:34px;margin-bottom:16px;filter:drop-shadow(0 8px 16px rgba(0,0,0,.22))}
+.glossy-kicker{font-family:var(--serif);font-style:italic;font-size:15px;font-weight:500;letter-spacing:.02em;color:rgba(244,235,221,.62);margin-bottom:10px}
+.glossy-title{font-family:var(--serif);font-size:34px;font-style:italic;color:#fff9ec;line-height:1.1;margin-bottom:18px;text-shadow:0 1px 18px rgba(0,0,0,.35)}
+.glossy-text{font-family:var(--ui);font-size:16px;color:#dec682;line-height:1.65;max-width:44ch;margin:0 auto}
+.glossy-text b{color:#f1cf79}
+.nuvori-way{background:#0b0807;text-align:center;padding:38px 28px 42px;border-bottom:1px solid rgba(184,154,94,.20)}
+.nw-label{font-family:var(--cinzel);font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+.nw-line{font-family:var(--serif);font-size:26px;font-style:italic;color:var(--platinum);line-height:1.25;margin-bottom:14px}
+.nw-body{font-family:var(--ui);font-size:15px;color:#a99d8e;line-height:1.7;max-width:54ch;margin:0 auto}
+.nw-body b{color:var(--champ)}
+
+/* Private action layer — no fake gate */
+.private-layer{max-width:600px;margin:30px auto 0;display:grid;gap:12px;text-align:left}
+.private-card{background:rgba(244,235,221,.045);border:1px solid rgba(184,154,94,.22);border-radius:14px;padding:16px 18px}
+.private-card strong{display:block;font-family:var(--ui);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--champ);margin-bottom:6px}
+.private-card span{display:block;font-family:var(--ui);font-size:14px;color:#aaa096;line-height:1.6}
+
+/* Reveal */
+.reveal-btn{font-family:var(--ui);font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink);background:transparent;border:1px solid var(--gold);border-radius:8px;padding:9px 16px;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:8px;margin-top:6px}
+.reveal-btn:hover{background:var(--gold-hi);border-color:var(--gold-hi);color:#fff}
+.reveal-btn .arr{transition:transform .2s;display:inline-block}
+.reveal-btn.open .arr{transform:rotate(90deg)}
+.reveal-body{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.reveal-body.open{max-height:900px}
+.reveal-inner{padding-top:14px}
+.model-text{font-family:var(--serif);font-size:17.5px;font-style:italic;font-weight:500;color:#0E0B07;line-height:1.58;background:var(--green-bg);border-left:3px solid var(--green);padding:15px 17px;border-radius:0 8px 8px 0}
+
+/* Obsidian Founder Seal — mid-page, dark inset on cream */
+.seal-wrap{padding:40px 26px;background:var(--ivory)}
+.quote-seal{background:radial-gradient(circle at 50% 8%,rgba(227,193,118,.15),transparent 34%),radial-gradient(circle at 50% 100%,rgba(227,193,118,.10),transparent 26%),linear-gradient(180deg,#17130E 0%,#0B0807 100%);border:1px solid rgba(184,154,94,.36);color:var(--platinum);border-radius:28px;padding:42px 28px 46px;text-align:center;position:relative;overflow:hidden;box-shadow:0 30px 90px rgba(0,0,0,.42)}
+.quote-seal:before{content:"";position:absolute;inset:18px;border:1px solid rgba(184,154,94,.18);border-radius:22px;pointer-events:none}
+.quote-seal .seal-emblem{width:60px;height:auto;margin:0 auto 22px;display:block;filter:brightness(1.2) drop-shadow(0 0 10px rgba(227,193,118,.18))}
+.quote-seal .quote-label{display:inline-flex;align-items:center;gap:18px;font-family:var(--serif);font-style:italic;font-size:15px;font-weight:500;letter-spacing:.02em;color:var(--champ);text-transform:none;margin-bottom:26px}
+.quote-seal .quote-label:before,.quote-seal .quote-label:after{content:"";width:48px;height:1px;background:rgba(184,154,94,.48)}
+.quote-seal blockquote{max-width:620px;margin:0 auto;font-family:var(--serif);font-size:clamp(28px,5.4vw,42px);line-height:1.16;font-weight:500;color:var(--platinum);letter-spacing:-.01em}
+.quote-seal .orn{width:120px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:30px auto 22px}
+.quote-seal cite{display:block;font-style:normal;font-family:var(--serif);font-size:23px;font-weight:500;letter-spacing:.01em;color:var(--gold-soft);line-height:1.2}
+.quote-seal cite span{display:block;font-family:var(--ui);font-size:10.5px;font-weight:500;letter-spacing:.28em;text-transform:uppercase;color:rgba(244,235,221,.56);margin:9px 0 0}
+
+/* Grammar Card — dark inset on cream */
+.grammar-card{background:var(--obsidian);border-radius:14px;padding:26px 24px;color:var(--platinum)}
+.grammar-card .sec-label{color:var(--gold)}
+.grammar-card .sec-title{color:var(--platinum)}
+.gc-q{font-family:var(--ui);font-size:13px;color:var(--champ);margin-bottom:4px;font-weight:600}
+.gc-a{font-family:var(--ui);font-size:14px;color:#D6CFC2;margin-bottom:14px;line-height:1.6}.gc-a:last-child{margin-bottom:0}
+.gc-eg{font-family:var(--serif);font-size:17px;font-style:italic;color:var(--gold-soft);margin-top:6px}
+
+/* Common Mistakes */
+.mistake{margin-bottom:14px;padding-bottom:14px;border-bottom:1px dashed var(--hair)}
+.mistake:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.mk-wrong{font-family:var(--ui);font-size:14px;color:var(--red);text-decoration:line-through;text-decoration-color:rgba(155,34,38,.5);margin-bottom:4px}
+.mk-right{font-family:var(--ui);font-size:14px;color:var(--green);font-weight:600;margin-bottom:4px}
+.mk-note{font-family:var(--ui);font-size:12px;color:var(--ink-soft)}
+
+/* Final Check — real MCQs */
+.q{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--hair)}
+.q:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0}
+.q-stem{font-family:var(--serif);font-size:18px;color:var(--ink);margin-bottom:12px;line-height:1.4}
+.q-num{color:var(--gold);font-weight:600;font-family:var(--ui);font-size:13px}
+.opts{display:flex;flex-direction:column;gap:7px;margin-bottom:6px}
+.opt{font-family:var(--ui);font-size:14px;color:var(--ink);background:var(--ivory);border:1px solid var(--hair);border-radius:8px;padding:9px 14px}
+.ans-box{font-family:var(--ui);font-size:13px;color:var(--green);background:var(--green-bg);border-radius:8px;padding:10px 14px;margin-top:8px}
+.ans-box b{color:var(--ink)}
+
+/* CTA — one-file mission model, no fake gate */
+.cta{background:radial-gradient(ellipse 90% 80% at 50% 0%,#1a1611 0%,var(--obsidian) 70%);padding:50px 26px 46px;text-align:center;border-top:1px solid var(--line)}
+.cta-final{font-family:var(--serif);font-size:24px;font-style:italic;color:var(--champ);line-height:1.4;margin:0 auto 12px;max-width:24ch}
+.cta-sub{font-family:var(--ui);font-size:14px;color:#A09890;margin:0 auto 26px;max-width:42ch;line-height:1.65}
+.cta-btn{display:inline-block;font-family:var(--ui);font-size:14px;font-weight:600;letter-spacing:.04em;color:var(--obsidian);background:linear-gradient(135deg,var(--gold-soft),var(--gold-hi));border:none;border-radius:30px;padding:14px 30px;text-decoration:none;cursor:pointer;transition:filter .2s}
+.cta-btn:hover{filter:brightness(1.08)}
+.gate{max-width:360px;margin:30px auto 0;text-align:center}
+.gate-label{font-family:var(--ui);font-size:12px;color:#7d7468;letter-spacing:.04em;margin-bottom:10px}
+.gate-row{display:flex;gap:8px;justify-content:center}
+.gate-input{font-family:var(--ui);font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--platinum);background:rgba(244,235,221,.05);border:1px solid var(--line-strong);border-radius:10px;padding:10px 14px;width:170px;text-align:center;outline:none}
+.gate-input:focus{border-color:var(--gold)}
+.gate-go{font-family:var(--ui);font-size:13px;font-weight:600;color:var(--obsidian);background:var(--gold-soft);border:none;border-radius:10px;padding:10px 16px;cursor:pointer}
+.gate-msg{font-family:var(--ui);font-size:12px;margin-top:10px;min-height:16px}
+.gate-msg.err{color:#cf8a6a}
+.gate-msg.ok{color:var(--champ)}
+
+/* Footer — institutional only (Ali removed per v1.3) */
+.footer-demo{background:var(--obsidian);padding:44px 26px;text-align:center;border-top:1px solid var(--line)}
+.footer-demo img{width:62px;height:auto;opacity:.90;filter:brightness(1.12) contrast(1.04);margin-bottom:12px}
+.footer-name{font-family:var(--cinzel);font-size:13px;letter-spacing:.36em;color:var(--gold-soft);font-weight:600;margin-bottom:7px;text-transform:uppercase}
+.footer-mission{font-size:11px;color:#b3a899;letter-spacing:.16em;text-transform:uppercase;margin-bottom:6px}
+.footer-house{font-size:11px;color:#83786d}
+
+@media(min-width:560px){.sec{padding-left:34px;padding-right:34px}.seal-wrap{padding-left:34px;padding-right:34px}}
+@media(max-width:520px){.hero{min-height:700px;padding-top:46px}.brand-emblem{width:240px}.brand-wordmark-type{font-size:34px}.mission-title{font-size:44px}.coreline{font-size:29px}.hero:before{inset:18px 12px}.quote-seal{padding:34px 18px 40px}}
+
+</style>
+</head>
+<body>
+
+<main class="page">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="brand-lockup" aria-label="NUVORI brand lockup">
+        <img class="brand-emblem" src="../assets/NUVORI_emblem_gold_transparent.png" alt="NUVORI emblem">
+        <div class="brand-wordmark-type" lang="en">NUVORI</div>
+        <div class="brand-tagline" lang="en">EXAM INTELLIGENCE HOUSE</div>
+        <div class="brand-divider"></div>
+      </div>
+      <div class="mission-no" lang="en">MISSION 01</div>
+      <h1 class="mission-title">My Daily<br>Routine</h1>
+      <div class="skill-focus" lang="en">SKILL FOCUS &middot; <span>SPEAKING + WRITING</span></div>
+      <div class="coreline">Choose your door.<br>Grow from there.</div>
+      <p class="intro">Today you will talk about your daily routine, write a clear answer, and record one confident voice message &mdash; with every word you need already on this page.</p>
+    </div>
+  </section>
+
+  <!-- CREAM READING BODY -->
+  <div class="reading">
+
+    <!-- LANGUAGE BANK -->
+    <section class="sec">
+      <div class="sec-label" lang="en">EVERYTHING YOU NEED</div>
+      <h2 class="sec-title">Today&rsquo;s Language Bank</h2>
+      <div class="bank-group">
+        <div class="bank-head" lang="en">Useful Verbs</div>
+        <div class="chips">
+          <span class="chip">wake up</span><span class="chip">get up</span><span class="chip">have breakfast</span>
+          <span class="chip">leave home</span><span class="chip">go to school</span>
+          <span class="chip">go to work</span><span class="chip">study</span>
+          <span class="chip">come home</span><span class="chip">relax</span><span class="chip">go to bed</span>
+        </div>
+      </div>
+      <div class="bank-group">
+        <div class="bank-head" lang="en">Time Words</div>
+        <div class="chips">
+          <span class="chip">in the morning</span><span class="chip">at noon</span><span class="chip">in the afternoon</span>
+          <span class="chip">in the evening</span><span class="chip">at night</span>
+          <span class="chip">usually</span><span class="chip">always</span><span class="chip">sometimes</span>
+        </div>
+      </div>
+      <div class="bank-group">
+        <div class="bank-head" lang="en">Sequence Words</div>
+        <div class="chips">
+          <span class="chip">First</span><span class="chip">Then</span><span class="chip">After that</span><span class="chip">Finally</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANSWER BUILDER — sequence -->
+    <section class="sec">
+      <div class="sec-label" lang="en">THE ANSWER BUILDER</div>
+      <h2 class="sec-title">Order Your Day</h2>
+      <p class="sec-lead">A routine is a sequence. Put your actions in order and the listener can follow you easily. Use these four moves to walk through your day from morning to night.</p>
+      <div class="builder">
+        <div class="builder-head" lang="en">Four moves &mdash; walk through your day in order</div>
+        <div class="builder-flow">
+          <span class="bstep">First&hellip;</span><span class="barrow">&rarr;</span>
+          <span class="bstep">Then&hellip;</span><span class="barrow">&rarr;</span>
+          <span class="bstep">After that&hellip;</span><span class="barrow">&rarr;</span>
+          <span class="bstep">Finally&hellip;</span>
+        </div>
+        <div class="builder-note">Name your first action, add the next step, then the next, then the last thing you do. You are not giving an opinion today &mdash; you are telling the order of your day clearly.</div>
+      </div>
+    </section>
+
+    <!-- DOORS -->
+    <section class="sec">
+      <div class="doors-intro">
+        <div class="sec-label" lang="en">ONE THEME &middot; THREE PATHS</div>
+        <h2 class="sec-title">Choose Your Door</h2>
+      </div>
+
+      <!-- START -->
+      <div class="door start">
+        <div class="door-head"><div class="door-name" lang="en">START</div><div class="door-level" lang="en">A1 &middot; A2</div></div>
+        <div class="door-goal">&ldquo;I can describe my day in clear, simple sentences.&rdquo;</div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Read this first &mdash; your complete model</div>
+          <div class="model-first">First, I wake up at seven o&rsquo;clock. Then I have breakfast and leave home. After that, I go to school in the morning and study in the afternoon. Finally, in the evening I relax, and at night I go to bed.</div>
+        </div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Now make it yours</div>
+          <div class="frame">First, I wake up at <span class="slot">______</span>. Then I <span class="slot">______</span>. After that, I <span class="slot">______</span>. Finally, in the evening I <span class="slot">______</span>.</div>
+        </div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Your mission</div>
+          <div class="frame">Write 5&ndash;6 sentences about your day in order. Then record a short voice message.</div>
+          <div class="voice-badge"><span>&#127908;</span> 30&ndash;45 second voice</div>
+        </div>
+
+        <div class="door-check">
+          <div class="db-label" lang="en">START Door Check &mdash; answer before you record</div>
+          <div class="mini-q">
+            <div class="mini-stem"><span class="q-num" lang="en">01.</span> I wake up ______ seven o&rsquo;clock.</div>
+            <div class="mini-opts"><div class="mini-opt">A) in</div><div class="mini-opt">B) at</div><div class="mini-opt">C) on</div></div>
+            <button class="reveal-btn" onclick="rv(this)"><span class="arr">&rsaquo;</span><span lang="en">Reveal answer</span></button>
+            <div class="reveal-body"><div class="reveal-inner"><div class="ans-box"><b>B) at.</b> We say <i>at seven o&rsquo;clock</i>.</div></div></div>
+          </div>
+          <div class="mini-q">
+            <div class="mini-stem"><span class="q-num" lang="en">02.</span> First I wake up. ______ I have breakfast.</div>
+            <div class="mini-opts"><div class="mini-opt">A) Then</div><div class="mini-opt">B) Because</div><div class="mini-opt">C) But</div></div>
+            <button class="reveal-btn" onclick="rv(this)"><span class="arr">&rsaquo;</span><span lang="en">Reveal answer</span></button>
+            <div class="reveal-body"><div class="reveal-inner"><div class="ans-box"><b>A) Then.</b> It shows the next step in your day.</div></div></div>
+          </div>
+          <div class="mini-q">
+            <div class="mini-stem"><span class="q-num" lang="en">03.</span> Fix it: <i>She wake up early.</i></div>
+            <div class="mini-opts"><div class="mini-opt">A) She wakes up early.</div><div class="mini-opt">B) She waking up early.</div><div class="mini-opt">C) She woke up early every day.</div></div>
+            <button class="reveal-btn" onclick="rv(this)"><span class="arr">&rsaquo;</span><span lang="en">Reveal answer</span></button>
+            <div class="reveal-body"><div class="reveal-inner"><div class="ans-box"><b>A) She wakes.</b> In present simple, add <b>-s</b> for <i>she</i>.</div></div></div>
+          </div>
+        </div>
+
+        <div class="win">When you finish this door, you can say: <b>&ldquo;I described my day in English, in order.&rdquo;</b></div>
+      </div>
+
+      <!-- BUILD -->
+      <div class="door build">
+        <div class="door-head"><div class="door-name" lang="en">BUILD</div><div class="door-level" lang="en">B1 &middot; B2</div></div>
+        <div class="door-goal">&ldquo;I can connect my routine into one smooth paragraph.&rdquo;</div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Read this first &mdash; your model</div>
+          <div class="model-first">My day usually starts at half past six, when my alarm rings. As soon as I get up, I have breakfast and get ready, because a calm start helps me think clearly. In the morning I go to school or work, and while the afternoon is usually busy, I try to keep the evening free. Even though my routine is full, I always keep thirty minutes for reading before I sleep.</div>
+        </div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Guided paragraph frame</div>
+          <div class="frame">My day usually starts when <span class="slot">______</span>. As soon as I get up, <span class="slot">______</span>, because <span class="slot">______</span>. While <span class="slot">______</span>, I try to <span class="slot">______</span>. Even though my routine is busy, <span class="slot">______</span>.</div>
+        </div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Stronger connectors to use</div>
+          <div class="chips dark-on-cream">
+            <span class="chip">as soon as</span><span class="chip">although</span><span class="chip">even though</span>
+            <span class="chip">while</span><span class="chip">by the time</span><span class="chip">instead of</span>
+          </div>
+        </div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Your mission</div>
+          <div class="frame">Write one paragraph (6&ndash;8 sentences) using at least three of the connectors above. Then record one minute.</div>
+          <div class="voice-badge"><span>&#127908;</span> 1 minute voice</div>
+        </div>
+
+        <div class="door-check">
+          <div class="db-label" lang="en">BUILD Door Check &mdash; connect your ideas</div>
+          <div class="mini-q">
+            <div class="mini-stem"><span class="q-num" lang="en">01.</span> ______ I get up, I have breakfast and get ready.</div>
+            <div class="mini-opts"><div class="mini-opt">A) As soon as</div><div class="mini-opt">B) Although</div><div class="mini-opt">C) Instead of</div></div>
+            <button class="reveal-btn" onclick="rv(this)"><span class="arr">&rsaquo;</span><span lang="en">Reveal answer</span></button>
+            <div class="reveal-body"><div class="reveal-inner"><div class="ans-box"><b>A) As soon as.</b> It means immediately after one action happens.</div></div></div>
+          </div>
+          <div class="mini-q">
+            <div class="mini-stem"><span class="q-num" lang="en">02.</span> Even though my routine is full, I ______ thirty minutes for reading.</div>
+            <div class="mini-opts"><div class="mini-opt">A) keeps</div><div class="mini-opt">B) keep</div><div class="mini-opt">C) protecting</div></div>
+            <button class="reveal-btn" onclick="rv(this)"><span class="arr">&rsaquo;</span><span lang="en">Reveal answer</span></button>
+            <div class="reveal-body"><div class="reveal-inner"><div class="ans-box"><b>B) keep.</b> The subject is <i>I</i>, so we use <i>keep</i>, not <i>keeps</i>.</div></div></div>
+          </div>
+          <div class="mini-q">
+            <div class="mini-stem"><span class="q-num" lang="en">03.</span> Which connector shows contrast?</div>
+            <div class="mini-opts"><div class="mini-opt">A) because</div><div class="mini-opt">B) even though</div><div class="mini-opt">C) as soon as</div></div>
+            <button class="reveal-btn" onclick="rv(this)"><span class="arr">&rsaquo;</span><span lang="en">Reveal answer</span></button>
+            <div class="reveal-body"><div class="reveal-inner"><div class="ans-box"><b>B) even though.</b> It shows contrast: the routine is full, but the person still reads.</div></div></div>
+          </div>
+        </div>
+
+        <div class="win">When you finish this door, you can say: <b>&ldquo;I built one connected paragraph and spoke it.&rdquo;</b></div>
+      </div>
+
+      <!-- STRETCH -->
+      <div class="door stretch">
+        <div class="door-head"><div class="door-name" lang="en">STRETCH</div><div class="door-level" lang="en">B2+ &middot; C1</div></div>
+        <div class="door-goal">&ldquo;I can reflect on my routine and argue what I would change.&rdquo;</div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Read this first &mdash; your model</div>
+          <div class="model-first">If I could redesign one part of my routine, I would reclaim the first hour of my morning. At present, I surrender it to my phone, scrolling through news that leaves me anxious before the day has even begun. Admittedly, staying informed has its value &mdash; but in hindsight, that hour costs me more than it gives. I would replace it with silence and a single page of writing, because a routine, after all, quietly shows what we decide to protect.</div>
+        </div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Reflective question</div>
+          <div class="frame">If you could redesign one part of your daily routine, what would it be &mdash; and what does that choice reveal about your priorities?</div>
+        </div>
+
+        <div class="door-block">
+          <div class="stretch-lang">
+            <div class="db-label" lang="en">Advanced language for this door</div>
+            <div class="chips">
+              <span class="chip">arguably</span><span class="chip">in hindsight</span><span class="chip">to a certain extent</span>
+              <span class="chip">what strikes me is&hellip;</span><span class="chip">rather than</span><span class="chip">a matter of priorities</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="door-block">
+          <div class="db-label" lang="en">Your mission</div>
+          <div class="frame">Write 120&ndash;180 words. Take a clear position, support it with one specific example, acknowledge a counter-view, and end with a reflection. Then record 90 seconds.</div>
+          <div class="voice-badge"><span>&#127908;</span> 90 second voice</div>
+        </div>
+
+        <div class="door-check">
+          <div class="db-label" lang="en">STRETCH Door Check &mdash; sharpen your reflection</div>
+          <div class="mini-q">
+            <div class="mini-stem"><span class="q-num" lang="en">01.</span> If I could redesign my morning, I ______ my phone with writing.</div>
+            <div class="mini-opts"><div class="mini-opt">A) replace</div><div class="mini-opt">B) would replace</div><div class="mini-opt">C) replaced</div></div>
+            <button class="reveal-btn" onclick="rv(this)"><span class="arr">&rsaquo;</span><span lang="en">Reveal answer</span></button>
+            <div class="reveal-body"><div class="reveal-inner"><div class="ans-box"><b>B) would replace.</b> <i>If I could...</i> sets up a hypothetical idea.</div></div></div>
+          </div>
+          <div class="mini-q">
+            <div class="mini-stem"><span class="q-num" lang="en">02.</span> Which phrase is best for looking back and judging a choice?</div>
+            <div class="mini-opts"><div class="mini-opt">A) in hindsight</div><div class="mini-opt">B) as soon as</div><div class="mini-opt">C) at seven o&rsquo;clock</div></div>
+            <button class="reveal-btn" onclick="rv(this)"><span class="arr">&rsaquo;</span><span lang="en">Reveal answer</span></button>
+            <div class="reveal-body"><div class="reveal-inner"><div class="ans-box"><b>A) in hindsight.</b> It means after thinking about the past more clearly.</div></div></div>
+          </div>
+          <div class="mini-q">
+            <div class="mini-stem"><span class="q-num" lang="en">03.</span> Which sentence has the strongest reflective tone?</div>
+            <div class="mini-opts"><div class="mini-opt">A) I wake up and use my phone.</div><div class="mini-opt">B) I think my first hour reveals what I value most.</div><div class="mini-opt">C) I have breakfast at eight.</div></div>
+            <button class="reveal-btn" onclick="rv(this)"><span class="arr">&rsaquo;</span><span lang="en">Reveal answer</span></button>
+            <div class="reveal-body"><div class="reveal-inner"><div class="ans-box"><b>B.</b> It does not only describe a habit; it interprets the meaning of that habit.</div></div></div>
+          </div>
+        </div>
+
+        <div class="win">When you finish this door, you can say: <b>&ldquo;I expressed and defended a reflective idea in English.&rdquo;</b></div>
+      </div>
+    </section>
+
+    <!-- FOUNDER SEAL -->
+    <div class="seal-wrap">
+      <div class="quote-seal">
+        <img class="seal-emblem" src="../assets/NUVORI_emblem_gold_transparent.png" alt="NUVORI emblem">
+        <div class="quote-label" lang="en">a word from the founder</div>
+        <blockquote>Fluency is not built from impressive words. It is built from small sentences said clearly, again and again.</blockquote>
+        <div class="orn"></div>
+        <cite>Ali Salmasi <span lang="en">Founder of NUVORI</span></cite>
+      </div>
+    </div>
+
+    <!-- GRAMMAR CARD -->
+    <section class="sec">
+      <div class="grammar-card">
+        <div class="sec-label" lang="en">MINI GRAMMAR CARD</div>
+        <h2 class="sec-title">Present Simple for Routines</h2>
+        <div class="gc-q" lang="en">What does it help me say?</div>
+        <div class="gc-a">Things you do regularly &mdash; every day, usually, always.</div>
+        <div class="gc-q" lang="en">What mistake does it prevent?</div>
+        <div class="gc-a">Forgetting the <b>-s</b> in he / she / it: <i>She wake up</i> &rarr; <i>She wakes up</i>.</div>
+        <div class="gc-q" lang="en">Where will I use it today?</div>
+        <div class="gc-a">In every sentence of your routine.<div class="gc-eg">I wake up &middot; She wakes up &middot; They go to work</div></div>
+      </div>
+    </section>
+
+    <!-- COMMON MISTAKES -->
+    <section class="sec">
+      <div class="sec-label" lang="en">FIX IT BEFORE YOU SAY IT</div>
+      <h2 class="sec-title">Common Mistakes</h2>
+      <div class="mistake"><div class="mk-wrong">I go to home after work.</div><div class="mk-right">I go home after work.</div><div class="mk-note">No &ldquo;to&rdquo; before <i>home</i>.</div></div>
+      <div class="mistake"><div class="mk-wrong">She wake up at seven.</div><div class="mk-right">She wakes up at seven.</div><div class="mk-note">Add <b>-s</b> for he / she / it.</div></div>
+      <div class="mistake"><div class="mk-wrong">I am go to bed early.</div><div class="mk-right">I go to bed early.</div><div class="mk-note">No <i>am</i> with a present-simple verb.</div></div>
+      <div class="mistake"><div class="mk-wrong">In the night I sleep.</div><div class="mk-right">At night I sleep.</div><div class="mk-note">Fixed phrase: <i>at night</i>, not <i>in</i>.</div></div>
+    </section>
+
+    <!-- FINAL MISSION — glossy premium pause -->
+    <section class="glossy-mission">
+      <div class="glossy-inner">
+        <div class="glossy-icon" aria-hidden="true">&#127908;</div>
+        <div class="glossy-kicker" lang="en">when you are ready &mdash;</div>
+        <h2 class="glossy-title">Final Mission</h2>
+        <p class="glossy-text">Choose your door, answer its questions, prepare your text, and read it out loud. Send <b>one voice message</b>. The goal is not perfect English &mdash; the goal is <b>brave English</b>.</p>
+      </div>
+    </section>
+
+    <section class="nuvori-way">
+      <div class="nw-label" lang="en">THE NUVORI WAY</div>
+      <div class="nw-line">We don&rsquo;t wait &mdash; we speak.</div>
+      <p class="nw-body">In speaking, the biggest mistake is silence. A longer sentence with a small mistake is still a win. Use a simple word, make a smart guess, and let the sentence move. <b>Brave English beats perfect English.</b></p>
+    </section>
+  </div>
+
+  <!-- CTA — one-file mission model with private action layer -->
+  <section class="cta" id="contact">
+    <div class="cta-final">Done? Send it in.</div>
+    <div class="cta-sub">Choose the final version of your answer, record it once with confidence, and keep the sentence moving.</div>
+
+    <div class="private-layer">
+      <div class="private-card">
+        <strong>Private NUVORI students</strong>
+        <span>Record your voice message and send it to your class WhatsApp group before the next lesson. I&rsquo;ll listen and give you feedback.</span>
+      </div>
+      <div class="private-card">
+        <strong>Practising on your own?</strong>
+        <span>Read your answer aloud, listen once, and improve one sentence. Small corrections make your English stronger.</span>
+      </div>
+      <div class="private-card">
+        <strong>Want personal feedback?</strong>
+        <span>Private NUVORI students receive guidance on their writing, speaking, and mission results. You can ask about availability below.</span>
+      </div>
+    </div>
+
+    <a class="cta-btn" href="https://wa.me/905523778322?text=Hello%20Ali%20Hoca%2C%20I%20saw%20the%20NUVORI%20mission%20page%20and%20would%20like%20to%20ask%20about%20private%20lesson%20availability." target="_blank" rel="noopener">Ask About Availability</a>
+  </section>
+
+  <!-- FOOTER — institutional only -->
+  <footer class="footer-demo">
+    <img src="../assets/NUVORI_footer_mark_gold_transparent.png" alt="NUVORI footer mark">
+    <div class="footer-name" lang="en">NUVORI</div>
+    <div class="footer-mission" lang="en">ENGLISH MISSION</div>
+    <div class="footer-house" lang="en">Exam Intelligence House</div>
+  </footer>
+</main>
+
+<script>
+
+function rv(b){
+  b.classList.toggle('open');
+  var body=b.nextElementSibling;
+  body.classList.toggle('open');
+}
+
+</script>
+</body>
+</html>
