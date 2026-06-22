@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>NUVORI · Mission 02 — The Lookalikes</title>
+<link rel="icon" type="image/png" href="../assets/NUVORI_favicon_128.png">
+<link rel="apple-touch-icon" href="../assets/NUVORI_app_icon_512.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NUVORI English">
+<meta property="og:title" content="Mission 02 — The Lookalikes">
+<meta property="og:description" content="When familiar words become traps. Catch the impostor — a NUVORI exam-intelligence mission on lookalike words.">
+<meta property="og:image" content="https://salmasiali80-design.github.io/nuvori-missions/assets/02-lookalikes-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://salmasiali80-design.github.io/nuvori-missions/02-the-lookalikes/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0B0807">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --obsidian:#0B0807; --panel:#16130E; --panel-2:#1C1812;
+  --gold:#B89A5E; --gold-hi:#D6A23A; --gold-soft:#E3C176; --champagne:#D7C08A;
+  --platinum:#F4EBDD; --ink-on-dark:#EDE4D3; --muted:#9A8F7C;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --ui:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --cinzel:'Cinzel',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:
+    radial-gradient(900px 500px at 50% -8%, #1a1611 0%, transparent 60%),
+    radial-gradient(700px 600px at 100% 30%, #15110c 0%, transparent 55%),
+    var(--obsidian);
+  background-attachment:fixed;
+  color:var(--ink-on-dark); font-family:var(--ui);
+  line-height:1.55; min-height:100vh; padding:0 0 70px;
+}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+
+/* ---- BRAND LOCKUP ---- */
+.brand-lockup{text-align:center;padding:46px 0 8px;margin-bottom:6px}
+.brand-emblem{width:88px;height:auto;display:block;margin:0 auto 14px;
+  filter:brightness(1.26) contrast(1.10) saturate(1.05) drop-shadow(0 0 12px rgba(227,193,118,.20))}
+.brand-wordmark{width:212px;height:auto;display:block;margin:0 auto 11px;
+  filter:brightness(1.18) contrast(1.10) drop-shadow(0 0 6px rgba(227,193,118,.10))}
+.brand-tagline{font-family:var(--cinzel);font-size:9px;font-weight:600;letter-spacing:.30em;color:rgba(215,192,138,.82)}
+.brand-divider{width:92px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:20px auto 0;opacity:.75}
+
+/* ---- HERO ---- */
+.hero{text-align:center;padding:30px 0 16px}
+.hero .kicker{font-family:var(--cinzel);font-size:10px;letter-spacing:.34em;color:var(--champagne);font-weight:600;margin-bottom:18px}
+.hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(40px,11vw,62px);line-height:.98;letter-spacing:.01em;color:var(--platinum)}
+.hero .sub{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--gold-soft);margin-top:8px}
+.hero .line{font-size:15px;color:var(--muted);max-width:46ch;margin:20px auto 0;line-height:1.6}
+
+.section-rule{width:64px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:40px auto}
+
+/* ---- OPENING ---- */
+.opening{padding:8px 4px}
+.opening p{font-size:16px;color:#D9CFBE;margin-bottom:14px;line-height:1.62}
+.opening .accent{color:var(--gold-soft)}
+.opening .rule-line{border-left:2px solid var(--gold-hi);padding:12px 0 12px 18px;margin-top:18px;
+  font-family:var(--serif);font-style:italic;font-size:19px;color:var(--platinum);line-height:1.4}
+
+/* ---- DOOR HEADERS ---- */
+.door{margin-top:8px}
+.door.start  {--door-accent:#5F8D73;--slot-ink:#7FB89A}
+.door.build  {--door-accent:#B88742;--slot-ink:#D6A23A}
+.door.stretch{--door-accent:#9B7EC0;--slot-ink:#B9A0DA}
+.door-head{position:relative;text-align:center;margin:54px 0 10px;padding:30px 0 4px}
+/* ghost door-number behind the word */
+.door-ghost{position:absolute;top:-6px;left:50%;transform:translateX(-50%);
+  font-family:var(--serif);font-style:italic;font-weight:600;font-size:108px;line-height:1;
+  color:var(--door-accent);opacity:.10;pointer-events:none;letter-spacing:.02em;z-index:0}
+/* the ceremonial door word, flanked by rules */
+.door-plate{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:18px;margin-bottom:4px}
+.door-plate .rule{flex:1;max-width:90px;height:1px;
+  background:linear-gradient(90deg,transparent,var(--door-accent));opacity:.6}
+.door-plate .rule.r{background:linear-gradient(90deg,var(--door-accent),transparent)}
+.door-word{font-family:var(--cinzel);font-size:23px;font-weight:700;letter-spacing:.34em;
+  color:var(--door-accent);text-indent:.34em;
+  text-shadow:0 0 22px color-mix(in srgb,var(--door-accent) 40%, transparent)}
+.door-x-flag{display:block;margin:9px auto 0;width:fit-content;font-family:var(--cinzel);font-size:8.5px;
+  font-weight:600;letter-spacing:.24em;color:#E0B450;
+  border:1px solid rgba(214,162,58,.45);border-radius:5px;padding:3px 10px;
+  background:rgba(214,162,58,.06)}
+.door-title{position:relative;z-index:1;font-family:var(--serif);font-size:31px;font-weight:600;
+  color:var(--platinum);margin-top:13px;line-height:1.1}
+.door-note{position:relative;z-index:1;font-size:13.5px;color:var(--muted);margin-top:7px;font-style:italic;
+  max-width:46ch;margin-left:auto;margin-right:auto;line-height:1.5}
+
+/* ---- CARD ---- */
+.card{position:relative;background:linear-gradient(170deg,var(--panel),var(--panel-2));
+  border:1px solid rgba(184,154,94,.18);border-radius:20px;padding:24px 22px 22px;margin:18px 0;
+  box-shadow:0 14px 40px rgba(0,0,0,.34)}
+.card-x{border-color:rgba(155,126,192,.30)}
+.card-num{position:absolute;top:16px;right:18px;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--door-accent);opacity:.7}
+
+.twins{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.twin{position:relative;padding-left:14px}
+.twin::before{content:"";position:absolute;left:0;top:4px;bottom:4px;width:2px;border-radius:2px;background:var(--door-accent);opacity:.55}
+.tw-word{font-family:var(--serif);font-weight:600;font-size:25px;color:var(--platinum);line-height:1.05}
+.tw-ipa{font-family:var(--ui);font-size:11.5px;color:var(--muted);letter-spacing:.02em;margin:4px 0 0;opacity:.78}
+.tw-tr{font-size:12.5px;color:var(--champagne);font-style:italic;margin:3px 0 5px;opacity:.9}
+.tw-def{font-size:13.5px;color:#CFC4B2;line-height:1.45}
+
+/* ---- COLLOCATIONS ---- */
+.collo{background:rgba(184,154,94,.06);border:1px solid rgba(184,154,94,.18);border-radius:14px;padding:13px 15px;margin-bottom:16px}
+.collo-h{font-family:var(--cinzel);font-size:9px;font-weight:700;letter-spacing:.26em;color:var(--champagne);margin-bottom:10px}
+.collo-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px 16px}
+.col-row{font-size:13.5px;color:#D9CFBE;padding:3px 0;line-height:1.4}
+.col-row b{color:var(--platinum);font-weight:600}
+
+.root{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gold-soft);line-height:1.4;margin-bottom:14px}
+.exs{margin-bottom:16px}
+.ex{font-size:14.5px;color:#D9CFBE;padding:7px 0;border-bottom:1px dashed rgba(184,154,94,.14)}
+.ex:last-child{border-bottom:none}
+.ex b{color:var(--gold-soft);font-weight:600}
+
+/* ---- QUICK CHECK ---- */
+.qc{background:rgba(0,0,0,.22);border:1px solid rgba(184,154,94,.16);border-radius:14px;padding:15px 15px 14px}
+.qc-h{font-family:var(--cinzel);font-size:9px;font-weight:700;letter-spacing:.22em;color:var(--door-accent)}
+.qc-h span{color:var(--muted);font-weight:400;letter-spacing:.10em}
+.qc-stem{font-size:15px;color:var(--platinum);margin:11px 0 13px;line-height:1.5}
+.qc-opts{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.qc-opt{font-family:var(--ui);font-size:15px;color:var(--ink-on-dark);background:rgba(184,154,94,.08);
+  border:1px solid rgba(184,154,94,.30);border-radius:11px;padding:12px 10px;cursor:pointer;
+  display:flex;align-items:center;gap:9px;transition:.18s;text-align:left}
+.qc-opt:hover{background:rgba(184,154,94,.16);border-color:var(--door-accent)}
+.qc-opt:disabled{cursor:default;opacity:.55}
+.qc-opt.picked{border-color:var(--door-accent);background:rgba(184,154,94,.20)}
+.ql{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--door-accent);flex:none;width:16px}
+
+/* reveal: clip-proof grid-rows */
+.qc-reveal{display:grid;grid-template-rows:0fr;transition:grid-template-rows .42s cubic-bezier(.2,.7,.3,1);margin-top:0}
+.qc-reveal>div{overflow:hidden;min-height:0}
+.qc-reveal.open{grid-template-rows:1fr;margin-top:13px}
+.qc-right,.qc-wrong{display:none;gap:11px;align-items:flex-start;padding:13px 14px;border-radius:11px}
+.qc-reveal.show-right .qc-right{display:flex;background:rgba(95,141,115,.12);border:1px solid rgba(95,141,115,.40)}
+.qc-reveal.show-wrong .qc-wrong{display:flex;background:rgba(166,69,47,.10);border:1px solid rgba(166,69,47,.36)}
+.tick{color:#7FB89A;font-size:18px;flex:none;line-height:1.3}
+.cross{color:#D69A6A;font-size:18px;flex:none;line-height:1.3}
+.rl{color:#9FD3B5;font-size:14px;display:block;margin-bottom:3px}
+.wl{color:#E0A982;font-size:14px;display:block;margin-bottom:3px}
+.rt{font-size:13.5px;color:#D9CFBE;line-height:1.5}
+.rt b{color:var(--platinum)} .rt i{color:var(--gold-soft);font-style:italic}
+
+/* ---- TRAP (door3) ---- */
+.trap{margin-top:14px;font-size:14px;color:#D9CFBE;line-height:1.55;
+  background:rgba(155,126,192,.08);border-left:2px solid #9B7EC0;border-radius:0 10px 10px 0;padding:11px 14px}
+.trap-l{font-family:var(--cinzel);font-size:9px;font-weight:700;letter-spacing:.22em;color:#B9A0DA;margin-right:6px}
+.trap i{color:var(--gold-soft)}
+
+/* ---- door connective lines ---- */
+.door-rule{font-size:14px;color:var(--muted);font-style:italic;text-align:center;max-width:48ch;margin:18px auto 6px;line-height:1.55}
+
+/* ---- TAKEAWAY ---- */
+.takeaway{text-align:center;padding:10px 6px}
+.takeaway p{font-size:15.5px;color:#D9CFBE;line-height:1.6;margin-bottom:16px}
+.takeaway .big{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--platinum);line-height:1.4;
+  border-top:1px solid rgba(184,154,94,.25);border-bottom:1px solid rgba(184,154,94,.25);padding:18px 0;max-width:32ch;margin:0 auto}
+
+/* ---- WORD TREASURE ---- */
+.treasure{background:linear-gradient(160deg,rgba(214,162,58,.10),rgba(184,154,94,.04));
+  border:1px solid rgba(214,162,58,.34);border-radius:18px;padding:22px 22px;margin:30px 0;text-align:center;
+  box-shadow:0 0 30px rgba(214,162,58,.08) inset}
+.treasure-h{font-family:var(--cinzel);font-size:11px;font-weight:700;letter-spacing:.26em;color:var(--gold-hi);margin-bottom:13px}
+.treasure-h .gem{margin-right:7px}
+.treasure p{font-size:15px;color:#E2D8C6;line-height:1.6;margin-bottom:7px}
+.treasure .term{font-family:var(--serif);font-weight:600;font-size:21px;color:var(--gold-soft)}
+.treasure .plain{font-size:13px;color:var(--muted);font-style:italic}
+.treasure .last{color:var(--platinum);margin-top:10px;margin-bottom:0}
+
+/* ---- YOUR MISSION ---- */
+.mission{background:rgba(95,141,115,.08);border:1px solid rgba(95,141,115,.30);border-radius:18px;padding:24px 22px;margin:26px 0;text-align:center}
+.mission-h{font-family:var(--cinzel);font-size:11px;font-weight:700;letter-spacing:.24em;color:#7FB89A;margin-bottom:6px}
+.mission-sub{font-size:12px;color:var(--muted);font-style:italic;margin-bottom:16px}
+.mission p{font-size:15px;color:#D9CFBE;line-height:1.6;margin-bottom:14px}
+.mission .words{font-family:var(--serif);font-size:23px;color:var(--platinum);letter-spacing:.01em;margin:4px 0 16px}
+.mission .words b{color:var(--gold-soft);font-weight:600}
+.mission .stretch-opt{font-size:13px;color:var(--muted);font-style:italic;border-top:1px dashed rgba(95,141,115,.3);padding-top:13px;margin-top:4px}
+.mission .stretch-opt b{color:var(--champagne)}
+
+/* ---- FOUNDER ---- */
+.quote-seal{text-align:center;padding:38px 10px 30px}
+.quote-seal .mark{font-family:var(--serif);font-size:40px;color:var(--gold);opacity:.5;line-height:.4}
+.quote-seal blockquote{font-family:var(--serif);font-style:italic;font-weight:500;font-size:24px;color:var(--platinum);
+  line-height:1.42;max-width:34ch;margin:14px auto 18px}
+.quote-seal cite{display:block;font-family:var(--serif);font-size:22px;font-weight:600;color:var(--gold-soft);font-style:normal}
+.quote-seal cite span{display:block;font-family:var(--ui);font-size:10px;font-weight:500;letter-spacing:.26em;
+  color:var(--muted);text-transform:none;margin-top:5px}
+
+.founder-note{background:linear-gradient(170deg,var(--panel),var(--panel-2));border:1px solid rgba(184,154,94,.16);
+  border-radius:18px;padding:26px 24px;margin:8px 0 6px}
+.founder-note p{font-size:15.5px;color:#D9CFBE;line-height:1.66;margin-bottom:13px}
+.founder-note p:last-child{margin-bottom:0;color:var(--platinum)}
+.founder-note .em{color:var(--gold-soft);font-style:italic}
+
+/* ---- FOOTER ---- */
+.footer{text-align:center;padding:48px 0 0}
+.footer-emblem{width:46px;height:auto;margin:0 auto 14px;display:block;opacity:.8;
+  filter:brightness(1.2) contrast(1.05) drop-shadow(0 0 8px rgba(227,193,118,.15))}
+.footer-name{font-family:var(--cinzel);font-size:14px;font-weight:700;letter-spacing:.30em;color:var(--gold-soft)}
+.footer-mission{font-family:var(--cinzel);font-size:9px;font-weight:600;letter-spacing:.30em;color:var(--champagne);margin-top:7px}
+.footer-house{font-family:var(--cinzel);font-size:8.5px;font-weight:400;letter-spacing:.30em;color:var(--muted);margin-top:5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="brand-lockup" aria-label="NUVORI brand lockup">
+    <img class="brand-emblem" src="../assets/NUVORI_emblem_gold_transparent.png" alt="NUVORI emblem">
+    <img class="brand-wordmark" src="../assets/NUVORI_wordmark_gold_transparent.png" alt="NUVORI wordmark">
+    <div class="brand-tagline" lang="en">EXAM INTELLIGENCE HOUSE</div>
+    <div class="brand-divider"></div>
+  </div>
+
+  <header class="hero">
+    <div class="kicker" lang="en">ENGLISH MISSION 02</div>
+    <h1>The Lookalikes</h1>
+    <div class="sub">When familiar words become traps.</div>
+    <p class="line">Some words look almost the same. The exam knows you may trust your eye.</p>
+  </header>
+
+  <div class="section-rule"></div>
+
+  <section class="opening">
+    <p>Some English words are dangerous because they look familiar.</p>
+    <p>One letter changes. The ending changes. Your eye relaxes — <span class="accent">I know this word.</span> But the sentence needed the other one.</p>
+    <p>That is the lookalike trap.</p>
+    <div class="rule-line">When two words look alike, slow down. The shape is not enough. The sentence gives the clue.</div>
+  </section>
+
+  <!-- DOOR 1 -->
+  <section class="door start">
+    <div class="door-head">
+      <div class="door-ghost" aria-hidden="true">I</div>
+      <div class="door-plate">
+        <span class="rule"></span>
+        <span class="door-word" lang="en">START</span>
+        <span class="rule r"></span>
+      </div>
+      <div class="door-title">Meet the lookalikes</div>
+      <div class="door-note">Three easy pairs. Read. Notice. Win.</div>
+    </div>
+    
+    <article class="card">
+      <div class="card-num" lang="en">01</div>
+      <div class="twins">
+        <div class="twin">
+          <div class="tw-word" lang="en">economic</div>
+          <div class="tw-ipa" lang="en">/ˌiːkəˈnɒmɪk/</div>
+          <div class="tw-tr" lang="tr">ekonomiyle ilgili</div>
+          <div class="tw-def">a nation's money, trade, jobs</div>
+        </div>
+        <div class="twin">
+          <div class="tw-word" lang="en">economical</div>
+          <div class="tw-ipa" lang="en">/ˌiːkəˈnɒmɪkəl/</div>
+          <div class="tw-tr" lang="tr">tutumlu · hesaplı</div>
+          <div class="tw-def">cheap to run; saves money</div>
+        </div>
+      </div>
+      <div class="collo">
+        <div class="collo-h" lang="en">COLLOCATIONS</div>
+        <div class="collo-grid">
+          <div class="collo-col"><div class="col-row">an <b>economic</b> crisis</div><div class="col-row"><b>economic</b> growth</div><div class="col-row"><b>economic</b> policy</div></div>
+          <div class="collo-col"><div class="col-row">an <b>economical</b> car</div><div class="col-row">the <b>economical</b> option</div><div class="col-row"><b>economical</b> with money</div></div>
+        </div>
+      </div>
+      <div class="root">Both come from “economy” — one took the nation, one took your wallet.</div>
+      <div class="exs"><div class="ex">The country faced an <b>economic</b> crisis.</div><div class="ex">This small car is very <b>economical</b>.</div></div>
+      
+      <div class="qc">
+        <div class="qc-h" lang="en">QUICK CHECK <span>· tap A or B</span></div>
+        <div class="qc-stem">This heater uses very little electricity. It is very ______.</div>
+        <div class="qc-opts">
+          <button class="qc-opt" onclick="reveal('q1','A','B')"><span class="ql">A</span>economic</button>
+          <button class="qc-opt" onclick="reveal('q1','B','B')"><span class="ql">B</span>economical</button>
+        </div>
+        <div class="qc-reveal" id="q1">
+          <div class="qc-right"><span class="tick">✓</span><div><b class="rl">Correct — you caught it.</b><div class="rt"><b>B — economical.</b> It saves money and energy.</div></div></div>
+          <div class="qc-wrong"><span class="cross">→</span><div><b class="wl">Almost — look at the clue again.</b><div class="rt">Look at the clue: “uses very little electricity.” That means saving money — so <b>economical</b>.</div></div></div>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-num" lang="en">02</div>
+      <div class="twins">
+        <div class="twin">
+          <div class="tw-word" lang="en">sensible</div>
+          <div class="tw-ipa" lang="en">/ˈsensəbl/</div>
+          <div class="tw-tr" lang="tr">mantıklı</div>
+          <div class="tw-def">wise, practical</div>
+        </div>
+        <div class="twin">
+          <div class="tw-word" lang="en">sensitive</div>
+          <div class="tw-ipa" lang="en">/ˈsensətɪv/</div>
+          <div class="tw-tr" lang="tr">duygusal · alıngan</div>
+          <div class="tw-def">easily affected; feels deeply</div>
+        </div>
+      </div>
+      <div class="collo">
+        <div class="collo-h" lang="en">COLLOCATIONS</div>
+        <div class="collo-grid">
+          <div class="collo-col"><div class="col-row">a <b>sensible</b> decision</div><div class="col-row">a <b>sensible</b> choice</div><div class="col-row">a <b>sensible</b> idea</div></div>
+          <div class="collo-col"><div class="col-row"><b>sensitive</b> to criticism</div><div class="col-row"><b>sensitive</b> skin</div><div class="col-row">a <b>sensitive</b> topic</div></div>
+        </div>
+      </div>
+      <div class="root">Both come from “sense” — one senses the smart choice, one senses every feeling.</div>
+      <div class="exs"><div class="ex">Taking an umbrella was a <b>sensible</b> decision.</div><div class="ex">She is very <b>sensitive</b> to criticism.</div></div>
+      
+      <div class="qc">
+        <div class="qc-h" lang="en">QUICK CHECK <span>· tap A or B</span></div>
+        <div class="qc-stem">You should sleep early before the exam. That is a ______ choice.</div>
+        <div class="qc-opts">
+          <button class="qc-opt" onclick="reveal('q2','A','A')"><span class="ql">A</span>sensible</button>
+          <button class="qc-opt" onclick="reveal('q2','B','A')"><span class="ql">B</span>sensitive</button>
+        </div>
+        <div class="qc-reveal" id="q2">
+          <div class="qc-right"><span class="tick">✓</span><div><b class="rl">Correct — you caught it.</b><div class="rt"><b>A — sensible.</b> It is a wise decision, not a feeling.</div></div></div>
+          <div class="qc-wrong"><span class="cross">→</span><div><b class="wl">Almost — look at the clue again.</b><div class="rt">The sentence is about a smart choice, not feelings — so <b>sensible</b>.</div></div></div>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-num" lang="en">03</div>
+      <div class="twins">
+        <div class="twin">
+          <div class="tw-word" lang="en">classic</div>
+          <div class="tw-ipa" lang="en">/ˈklæsɪk/</div>
+          <div class="tw-tr" lang="tr">klasikleşmiş · başyapıt</div>
+          <div class="tw-def">famous, excellent, timeless</div>
+        </div>
+        <div class="twin">
+          <div class="tw-word" lang="en">classical</div>
+          <div class="tw-ipa" lang="en">/ˈklæsɪkəl/</div>
+          <div class="tw-tr" lang="tr">klasik dönem · geleneksel</div>
+          <div class="tw-def">traditional, formal: music, art</div>
+        </div>
+      </div>
+      <div class="collo">
+        <div class="collo-h" lang="en">COLLOCATIONS</div>
+        <div class="collo-grid">
+          <div class="collo-col"><div class="col-row">a <b>classic</b> film</div><div class="col-row">a <b>classic</b> novel</div><div class="col-row">a <b>classic</b> mistake</div></div>
+          <div class="collo-col"><div class="col-row"><b>classical</b> music</div><div class="col-row"><b>classical</b> art</div><div class="col-row"><b>classical</b> literature</div></div>
+        </div>
+      </div>
+      <div class="root">Both come from the world of “classic” — one became a masterpiece, one became a tradition.</div>
+      <div class="exs"><div class="ex">That film is a <b>classic</b>.</div><div class="ex">She listens to <b>classical</b> music.</div></div>
+      
+      <div class="qc">
+        <div class="qc-h" lang="en">QUICK CHECK <span>· tap A or B</span></div>
+        <div class="qc-stem">Mozart is one of the greatest names in ______ music.</div>
+        <div class="qc-opts">
+          <button class="qc-opt" onclick="reveal('q3','A','B')"><span class="ql">A</span>classic</button>
+          <button class="qc-opt" onclick="reveal('q3','B','B')"><span class="ql">B</span>classical</button>
+        </div>
+        <div class="qc-reveal" id="q3">
+          <div class="qc-right"><span class="tick">✓</span><div><b class="rl">Correct — you caught it.</b><div class="rt"><b>B — classical.</b> Mozart belongs to the formal tradition.</div></div></div>
+          <div class="qc-wrong"><span class="cross">→</span><div><b class="wl">Almost — look at the clue again.</b><div class="rt">Mozart belongs to the old, formal music tradition — so <b>classical</b>.</div></div></div>
+        </div>
+      </div>
+    </article>
+    <div class="door-rule">Notice the pattern: the short word and the long word are not one word with extra letters. They are different words wearing the same coat.</div>
+  </section>
+
+  <!-- DOOR 2 -->
+  <section class="door build">
+    <div class="door-head">
+      <div class="door-ghost" aria-hidden="true">II</div>
+      <div class="door-plate">
+        <span class="rule"></span>
+        <span class="door-word" lang="en">BUILD</span>
+        <span class="rule r"></span>
+      </div>
+      <div class="door-title">Catch the impostor</div>
+      <div class="door-note">Now the sentence gives the clue. Read the word's job.</div>
+    </div>
+    
+    <article class="card">
+      <div class="card-num" lang="en">04</div>
+      <div class="twins">
+        <div class="twin">
+          <div class="tw-word" lang="en">historic</div>
+          <div class="tw-ipa" lang="en">/hɪˈstɒrɪk/</div>
+          <div class="tw-tr" lang="tr">tarihî öneme sahip</div>
+          <div class="tw-def">important enough to be remembered</div>
+        </div>
+        <div class="twin">
+          <div class="tw-word" lang="en">historical</div>
+          <div class="tw-ipa" lang="en">/hɪˈstɒrɪkəl/</div>
+          <div class="tw-tr" lang="tr">tarihle ilgili</div>
+          <div class="tw-def">relating to the past</div>
+        </div>
+      </div>
+      <div class="collo">
+        <div class="collo-h" lang="en">COLLOCATIONS</div>
+        <div class="collo-grid">
+          <div class="collo-col"><div class="col-row">a <b>historic</b> moment</div><div class="col-row">a <b>historic</b> victory</div><div class="col-row">a <b>historic</b> decision</div></div>
+          <div class="collo-col"><div class="col-row">a <b>historical</b> document</div><div class="col-row">a <b>historical</b> figure</div><div class="col-row">a <b>historical</b> novel</div></div>
+        </div>
+      </div>
+      <div class="root">Both come from “history” — one makes history, one just belongs to it.</div>
+      
+      
+      <div class="qc">
+        <div class="qc-h" lang="en">QUICK CHECK <span>· tap A or B</span></div>
+        <div class="qc-stem">Signing the peace treaty was a ______ moment for both nations.</div>
+        <div class="qc-opts">
+          <button class="qc-opt" onclick="reveal('q4','A','A')"><span class="ql">A</span>historic</button>
+          <button class="qc-opt" onclick="reveal('q4','B','A')"><span class="ql">B</span>historical</button>
+        </div>
+        <div class="qc-reveal" id="q4">
+          <div class="qc-right"><span class="tick">✓</span><div><b class="rl">Correct — you caught it.</b><div class="rt"><b>A — historic.</b> <i>Historic moment</i> is the natural phrase when a moment matters enough to be remembered.</div></div></div>
+          <div class="qc-wrong"><span class="cross">→</span><div><b class="wl">Almost — look at the clue again.</b><div class="rt">The moment was important — it made history. The natural phrase is <b>historic moment</b>.</div></div></div>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-num" lang="en">05</div>
+      <div class="twins">
+        <div class="twin">
+          <div class="tw-word" lang="en">considerate</div>
+          <div class="tw-ipa" lang="en">/kənˈsɪdərət/</div>
+          <div class="tw-tr" lang="tr">düşünceli · saygılı</div>
+          <div class="tw-def">kind and thoughtful to others</div>
+        </div>
+        <div class="twin">
+          <div class="tw-word" lang="en">considerable</div>
+          <div class="tw-ipa" lang="en">/kənˈsɪdərəbl/</div>
+          <div class="tw-tr" lang="tr">hatırı sayılır · büyük</div>
+          <div class="tw-def">large in amount or size</div>
+        </div>
+      </div>
+      <div class="collo">
+        <div class="collo-h" lang="en">COLLOCATIONS</div>
+        <div class="collo-grid">
+          <div class="collo-col"><div class="col-row">a <b>considerate</b> person</div><div class="col-row"><b>considerate</b> of others</div></div>
+          <div class="collo-col"><div class="col-row">a <b>considerable</b> amount</div><div class="col-row">a <b>considerable</b> sum</div></div>
+        </div>
+      </div>
+      <div class="root">Both come from “consider” — one considers people, one considers quantity.</div>
+      
+      
+      <div class="qc">
+        <div class="qc-h" lang="en">QUICK CHECK <span>· tap A or B</span></div>
+        <div class="qc-stem">Thank you for waiting. That was very ______ of you.</div>
+        <div class="qc-opts">
+          <button class="qc-opt" onclick="reveal('q5','A','A')"><span class="ql">A</span>considerate</button>
+          <button class="qc-opt" onclick="reveal('q5','B','A')"><span class="ql">B</span>considerable</button>
+        </div>
+        <div class="qc-reveal" id="q5">
+          <div class="qc-right"><span class="tick">✓</span><div><b class="rl">Correct — you caught it.</b><div class="rt"><b>A — considerate.</b> It praises kindness. (<i>Considerable</i> is for amount: a considerable sum.)</div></div></div>
+          <div class="qc-wrong"><span class="cross">→</span><div><b class="wl">Almost — look at the clue again.</b><div class="rt">The sentence praises kindness, not a big amount — so <b>considerate</b>.</div></div></div>
+        </div>
+      </div>
+    </article>
+    <article class="card">
+      <div class="card-num" lang="en">06</div>
+      <div class="twins">
+        <div class="twin">
+          <div class="tw-word" lang="en">industrious</div>
+          <div class="tw-ipa" lang="en">/ɪnˈdʌstriəs/</div>
+          <div class="tw-tr" lang="tr">çalışkan</div>
+          <div class="tw-def">hard-working</div>
+        </div>
+        <div class="twin">
+          <div class="tw-word" lang="en">industrial</div>
+          <div class="tw-ipa" lang="en">/ɪnˈdʌstriəl/</div>
+          <div class="tw-tr" lang="tr">sanayiyle ilgili</div>
+          <div class="tw-def">relating to industry, factories</div>
+        </div>
+      </div>
+      <div class="collo">
+        <div class="collo-h" lang="en">COLLOCATIONS</div>
+        <div class="collo-grid">
+          <div class="collo-col"><div class="col-row">an <b>industrious</b> student</div><div class="col-row">an <b>industrious</b> worker</div></div>
+          <div class="collo-col"><div class="col-row">an <b>industrial</b> zone</div><div class="col-row">the <b>industrial</b> revolution</div></div>
+        </div>
+      </div>
+      <div class="root">Both come from “industry” — one is the worker, one is the factory.</div>
+      
+      
+      <div class="qc">
+        <div class="qc-h" lang="en">QUICK CHECK <span>· tap A or B</span></div>
+        <div class="qc-stem">She passed every exam through effort — a truly ______ student.</div>
+        <div class="qc-opts">
+          <button class="qc-opt" onclick="reveal('q6','A','A')"><span class="ql">A</span>industrious</button>
+          <button class="qc-opt" onclick="reveal('q6','B','A')"><span class="ql">B</span>industrial</button>
+        </div>
+        <div class="qc-reveal" id="q6">
+          <div class="qc-right"><span class="tick">✓</span><div><b class="rl">Correct — you caught it.</b><div class="rt"><b>A — industrious.</b> It describes a person's effort. (<i>Industrial</i> describes zones and machines.)</div></div></div>
+          <div class="qc-wrong"><span class="cross">→</span><div><b class="wl">Almost — look at the clue again.</b><div class="rt">The sentence is about a hard-working person — so <b>industrious</b>.</div></div></div>
+        </div>
+      </div>
+    </article>
+    <div class="door-rule">The Door 2 rule: don't memorise which is which. Ask what job the word is doing here — quality, category, amount, or field. The sentence hands you the clue.</div>
+  </section>
+
+  <!-- DOOR 3 -->
+  <section class="door stretch">
+    <div class="door-head">
+      <div class="door-ghost" aria-hidden="true">III</div>
+      <div class="door-plate">
+        <span class="rule"></span>
+        <span class="door-word" lang="en">STRETCH</span>
+        <span class="rule r"></span>
+      </div>
+      <div class="door-x-flag" lang="en">EXAM-GRADE</div>
+      <div class="door-title">The exam's lookalikes</div>
+      <div class="door-note">These words look connected — one fits the evidence. English only, like the real exam.</div>
+    </div>
+    
+    <article class="card card-x">
+      <div class="card-num" lang="en">07</div>
+      <div class="twins">
+        <div class="twin">
+          <div class="tw-word" lang="en">literate</div>
+          <div class="tw-ipa" lang="en">/ˈlɪtərət/</div>
+          <div class="tw-def">able to read and write</div>
+        </div>
+        <div class="twin">
+          <div class="tw-word" lang="en">literary</div>
+          <div class="tw-ipa" lang="en">/ˈlɪtərəri/</div>
+          <div class="tw-def">about literature: books, novels, writing as art</div>
+        </div>
+      </div>
+      <div class="collo collo-x">
+        <div class="collo-h" lang="en">COLLOCATIONS</div>
+        <div class="collo-grid">
+          <div class="collo-col"><div class="col-row">a <b>literate</b> person</div><div class="col-row">a <b>literate</b> population</div><div class="col-row">digitally <b>literate</b></div></div>
+          <div class="collo-col"><div class="col-row"><b>literary</b> devices</div><div class="col-row"><b>literary</b> criticism</div><div class="col-row"><b>literary</b> tradition</div></div>
+        </div>
+      </div>
+      
+      <div class="qc">
+        <div class="qc-h" lang="en">QUICK CHECK <span>· tap A or B</span></div>
+        <div class="qc-stem">The professor discussed the novel's ______ devices, including symbolism and narrative voice.</div>
+        <div class="qc-opts">
+          <button class="qc-opt" onclick="reveal('q7','A','B')"><span class="ql">A</span>literate</button>
+          <button class="qc-opt" onclick="reveal('q7','B','B')"><span class="ql">B</span>literary</button>
+        </div>
+        <div class="qc-reveal" id="q7">
+          <div class="qc-right"><span class="tick">✓</span><div><b class="rl">Correct — you caught it.</b><div class="rt"><b>B — literary.</b> <i>Literary devices</i> is a fixed phrase. <i>Literate</i> means a person can read — it cannot describe devices.</div></div></div>
+          <div class="qc-wrong"><span class="cross">→</span><div><b class="wl">Almost — look at the clue again.</b><div class="rt">A novel's tools are <b>literary devices</b> — a fixed phrase. <i>Literate</i> means a person can read.</div></div></div>
+        </div>
+      </div>
+      <div class="trap"><span class="trap-l" lang="en">THE TRAP</span> Both words are about reading, so the eye grabs the first one. Only <b>literary</b> belongs to literature.</div>
+    </article>
+    <article class="card card-x">
+      <div class="card-num" lang="en">08</div>
+      <div class="twins">
+        <div class="twin">
+          <div class="tw-word" lang="en">momentary</div>
+          <div class="tw-ipa" lang="en">/ˈməʊməntri/</div>
+          <div class="tw-def">lasting only a short moment; brief</div>
+        </div>
+        <div class="twin">
+          <div class="tw-word" lang="en">momentous</div>
+          <div class="tw-ipa" lang="en">/məˈmentəs/</div>
+          <div class="tw-def">very important; with big results</div>
+        </div>
+      </div>
+      <div class="collo collo-x">
+        <div class="collo-h" lang="en">COLLOCATIONS</div>
+        <div class="collo-grid">
+          <div class="collo-col"><div class="col-row">a <b>momentary</b> pause</div><div class="col-row">a <b>momentary</b> lapse</div><div class="col-row"><b>momentary</b> relief</div></div>
+          <div class="collo-col"><div class="col-row">a <b>momentous</b> decision</div><div class="col-row">a <b>momentous</b> occasion</div><div class="col-row"><b>momentous</b> consequences</div></div>
+        </div>
+      </div>
+      
+      <div class="qc">
+        <div class="qc-h" lang="en">QUICK CHECK <span>· tap A or B</span></div>
+        <div class="qc-stem">The committee's decision proved ______ ; decades later, historians still trace its results.</div>
+        <div class="qc-opts">
+          <button class="qc-opt" onclick="reveal('q8','A','B')"><span class="ql">A</span>momentary</button>
+          <button class="qc-opt" onclick="reveal('q8','B','B')"><span class="ql">B</span>momentous</button>
+        </div>
+        <div class="qc-reveal" id="q8">
+          <div class="qc-right"><span class="tick">✓</span><div><b class="rl">Correct — you caught it.</b><div class="rt"><b>B — momentous.</b> “Decades later… historians still trace its results” shows lasting importance. <i>Momentary</i> means brief — the opposite.</div></div></div>
+          <div class="qc-wrong"><span class="cross">→</span><div><b class="wl">Almost — look at the clue again.</b><div class="rt">“Decades later… historians still trace its results” shows it lasted and mattered — so <b>momentous</b>, not brief.</div></div></div>
+        </div>
+      </div>
+      <div class="trap"><span class="trap-l" lang="en">THE TRAP</span> Both come from <i>moment</i>, so <i>momentary</i> feels safe. But one means short, the other means important — opposites.</div>
+    </article>
+  </section>
+
+  <div class="section-rule"></div>
+
+  <!-- TAKEAWAY -->
+  <section class="takeaway">
+    <p>The exam does not always punish what you don't know. Sometimes it punishes what you <i>half</i>-know — the familiar word you didn't stop to check.</p>
+    <div class="big">You didn't learn eight words today. You learned one habit: when a word looks familiar, slow down — the sentence gives the clue.</div>
+  </section>
+
+  <!-- WORD TREASURE -->
+  <section class="treasure">
+    <div class="treasure-h" lang="en"><span class="gem">◈</span>WORD TREASURE</div>
+    <p>Words that look alike but mean different things have a real name:<br><span class="term">paronyms.</span></p>
+    <p class="plain">(simple version: lookalike words)</p>
+    <p><i>economic</i> and <i>economical</i> are paronyms. Even native speakers mix them up.</p>
+    <p class="last">Now you know their secret name — and how to beat them.</p>
+  </section>
+
+  <!-- YOUR MISSION -->
+  <section class="mission">
+    <div class="mission-h" lang="en">YOUR MISSION</div>
+    <div class="mission-sub">write · then send to the group</div>
+    <p>Write <b>one clear sentence</b> for each word — use it naturally, don't explain the rule:</p>
+    <div class="words"><b>economic</b> · <b>economical</b> · <b>sensible</b> · <b>sensitive</b></div>
+    <p>Send your four sentences to the WhatsApp group. Reading the group's sentences is half the lesson.</p>
+    <div class="stretch-opt">Stretch option (stronger students): add one sentence with <b>momentous</b> or <b>literary</b>.</div>
+  </section>
+
+  <!-- FOUNDER QUOTE -->
+  <section class="quote-seal">
+    <div class="mark">“</div>
+    <blockquote>The exam rarely tests a word you do not know. It tests the one you did not look at closely enough.</blockquote>
+    <cite>Ali Salmasi<span lang="en">FOUNDER OF NUVORI</span></cite>
+  </section>
+
+  <!-- FOUNDER NOTE -->
+  <section class="founder-note">
+    <p>The hardest traps in any English exam are not the difficult words. They are the <span class="em">familiar</span> ones — words a student half-recognises and never stops to check.</p>
+    <p>At NUVORI, we teach students to slow down at the exact moment where mistakes are born. Two words may look alike, but the sentence reveals which one belongs.</p>
+    <p>That is the difference between knowing words and reading them.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img class="footer-emblem" src="../assets/NUVORI_emblem_gold_transparent.png" alt="NUVORI emblem">
+    <div class="footer-name" lang="en">NUVORI</div>
+    <div class="footer-mission" lang="en">ENGLISH MISSION</div>
+    <div class="footer-house" lang="en">EXAM INTELLIGENCE HOUSE</div>
+  </footer>
+
+</div>
+
+<script>
+function reveal(id, picked, correct){
+  var box = document.getElementById(id);
+  if(box.classList.contains('open')) return; // lock after first answer
+  var card = box.closest('.qc');
+  var opts = card.querySelectorAll('.qc-opt');
+  opts.forEach(function(o){ o.disabled = true; });
+  opts[picked==='A'?0:1].classList.add('picked');
+  box.classList.add('open');
+  if(picked===correct){ box.classList.add('show-right'); }
+  else { box.classList.add('show-wrong','show-right'); }
+}
+</script>
+</body>
+</html>
